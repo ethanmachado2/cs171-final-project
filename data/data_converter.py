@@ -1,5 +1,14 @@
 import sqlite3  
 import csv
+import os
+from dotenv import load_dotenv
+load_dotenv()
+import kaggle
+
+# loaded environment variables
+# call kaggle api to download sqlite db and unzip
+
+kaggle.api.dataset_download_files('hugomathien/soccer', path='.', unzip=True)
 
 database = 'database.sqlite' #database file to convert goes here
 
